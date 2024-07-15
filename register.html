@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+              /* 기본적인 스타일 초기화 */
+              body, h2, h3, p, nav, header, main, img, span {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: sans-serif; /* 기본 sans-serif 글꼴 사용 */
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+        }
+    
+        /* 헤더 스타일 */
+        header {
+            padding: 20px 0;
+            background-color: #80deea;
+            border-bottom: 2px solid #4dd0e1;
+        }
+    
+        header h2 {
+            margin-bottom: 10px;
+        }
+    
+        /* 네비게이션 스타일 */
+        nav {
+            background-color: #4dd0e1;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+    
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+    
+        nav a:hover {
+            text-decoration: underline;
+        }
+    
+        h1, h3 {
+            color: brown; /* 갈색 제목 색상 */
+        }
+    
+        nav {
+            margin-bottom: 20px;
+        }
+    
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+    
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff; /* 흰색 배경 */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+        }
+    
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+    
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="date"],
+        form select {
+            width: calc(100% - 10px);
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    
+        form input[type="button"],
+        form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4dd0e1; /* 연한 청색 */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+    
+        form input[type="button"]:hover,
+        form input[type="submit"]:hover {
+            background-color: #26c6da; /* 진한 청색 */
+        }
+    
+        form hr {
+            border: none;
+            border-top: 1px dashed #ccc;
+            margin: 20px 0;
+        }
+    
+        form span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+   
+    <nav>
+        <a href="introduse.html">소개</a>
+        <a href="project.html">프로젝트</a>
+        <a href="contact.html">연락처</a>
+        <a href="register.html">회원가입</a>
+    </nav>
+    
+<body>
+   
+<form action="submit" method="get">
+    <h2> 회원가입 </h2>
+<hr>
+<label for="useriD"><span style="color: red;">*</span>아이디</label>
+<input type="text" name="userID" id="userID" placeholder="아이디를 입력하세요" required>
+<input type="button" value="중복확인">
+<br>
+<label for="userpassword"><span style="color: red;">*</span>비밀번호</label><br>
+<input type="text" name="userpassword" id="userpassword" placeholder="비밀번호를 입력하세요" required pattern="^(?=.*[a-Za-z])(?=.*\d)(?=.*[$@&!%*#?&])[A-Za-z\d$@]"><br>
+<input type="text" name="userpassword" id="userpassword" placeholder="비밀번호를 재입력하세요" required pattern="^(?=.*[a-Za-z])(?=.*\d)(?=.*[$@&!%*#?&])"><br>
+
+<label for="username"><span style="color: red;">*</span>이름</label><br>
+<input type="text" name="username" id="username" placeholder="이름을 입력하세요" pattern=^[가-힣]+$><br>
+
+<label for="useraddress"><span style="color: red;">*</span>주소</label><br>
+<input type="text" name="useraddress" id="useraddress"> -
+<input type="text" name="useraddress2" id="useraddress">
+<input type="button" value="우편번호" ><br>
+<input type="text" name="useraddress3" id="useraddress" placeholder="상세주소를 입력하세요"><br>
+
+
+<label for="dropdown"><span style="color: red;">*</span>휴대전화</label><br> 
+    <select name="phonenumber" id="dropdown">
+        <option value="010">010</option>
+        <option value="010">011</option>
+        <option value="010">016</option>
+    </select>
+    <input type="text" name="phonenumber" id="phonenumber">
+    <input type="text" name="phonenumber2" id="phonenumber"><br>
+
+    <label for="dropdown"><span style="color: red;">*</span>전화번호</label><br>
+        <select name="phnumber" id="dropdown">
+            <option value="02">02</option>
+            <option value="031">031</option>
+            <option value="032">032</option>
+            <option value="041">041</option>
+        </select>
+        <input type="text" name="phumber" id="phnumber" pattern="\d{3,4}">
+        <input type="text" name="phnumber2" id="phnumber" pattern="\d{4}"><br>
+
+
+<label for="useremail"><span style="color: red;">*</span>이메일</label><br>
+    <input type="text" name="useremail" id="useremail">
+    <label for="dropdown"></label>
+    <select name="useremail" id="dropdown">
+        <option value="@gmail.com">@gmail.com</option>
+        <option value="@naver.com">@naver.com</option>
+        <option value="@deum.com">@deum.com</option>
+        <option value="@deum.com">@Yahoo.com</option>
+    </select>
+<br>
+
+<label for="userbirth"><span style="color: red;">*</span>생년월일</label><br>
+    <input type="date" name="userbirth" id="userbirth">
+    <br>
+</form>
+
+<input type="submit" value="제출">
+<hr>
+</body>
+</html>
